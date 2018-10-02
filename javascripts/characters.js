@@ -1,3 +1,5 @@
+import utilities from './helpers/util.js'
+
 const charachtersExporter = () => {
     for (let i = 0; i < charachters.length; i++){
         console.log(charachters[i]);
@@ -34,4 +36,17 @@ const charachters = [
     }
 ];
 
-export default charachtersExporter;
+const cardBuilder = () => {
+    let newString = ``;
+    for (let i = 0; i < charachters.length; i++) {
+        newString += `  <div class="card" id="${charachters[i].id}">
+                            <img class="card-img-top" src="${charachters[i].imgUrl}" alt="${charachters[i].name}">
+                            <div class="card-body">
+                                <h5 class="card-title">${charachters[i].name}</h5>
+                            </div>
+                        </div>`
+    }
+    utilities.printToDom('contentHere', newString);
+};
+
+export default {charachtersExporter, cardBuilder};

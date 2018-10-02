@@ -6,8 +6,8 @@ const init = () => {
     console.log("main.js linked");
     utilities.utilitesExporter();
     details();
-    characters();
-    utilities.printToDom('contentHere', 'test string printed')
+    characters.cardBuilder();
+    characters.charachtersExporter();
 }
 
 init();
