@@ -1,4 +1,5 @@
-import utilities from './helpers/util.js'
+import utilities from './helpers/util.js';
+import details from './details.js';
 
 const charachtersExporter = () => {
     for (let i = 0; i < charachters.length; i++){
@@ -47,6 +48,7 @@ const cardBuilder = () => {
                         </div>`
     }
     utilities.printToDom('contentHere', newString);
+    createEvents();
 };
 
 const createEvents = () => {
@@ -54,7 +56,7 @@ const createEvents = () => {
     for (let i = 0; i <cardArray.length; i++) {
         cardArray[i].addEventListener('click', (e) => {
             let cardId = e.currentTarget.id;
-            console.log(charachters.find( (element) => {
+            details.detailBuilder(charachters.find( (element) => {
                 return (element.id === cardId);
             }));
         })

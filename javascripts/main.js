@@ -4,11 +4,10 @@ import characters from './characters.js';
 
 const init = () => {
     console.log("main.js linked");
-    utilities.utilitesExporter();
-    details();
+    // utilities.utilitesExporter();
+    details.detailsExporter();
     characters.cardBuilder();
-    characters.charachtersExporter();
-    characters.createEvents();
+    // characters.charachtersExporter();
 }
 
 init();
