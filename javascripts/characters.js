@@ -13,7 +13,7 @@ const charachtersExporter = () => {
 const charachters = [
     {
         name: 'John Snow',
-        imgUrl: 'https://www.euruni.edu/blog/wp-content/uploads/2015/07/Jon-Snow-4.jpg',
+        imgUrl: 'http://images6.fanpop.com/image/photos/36800000/Jon-Snow-Season-4-jon-snow-36858109-2832-4256.jpg',
         house:'Stark',
         id: 'character0'
     },
@@ -40,7 +40,7 @@ const charachters = [
 const cardBuilder = () => {
     let newString = ``;
     for (let i = 0; i < charachters.length; i++) {
-        newString += `  <div class="card" id="${charachters[i].id}">
+        newString += `  <div class="card all-cards" id="${charachters[i].id}">
                             <img class="card-img-top" src="${charachters[i].imgUrl}" alt="${charachters[i].name}">
                             <div class="card-body">
                                 <h5 class="card-title">${charachters[i].name}</h5>
