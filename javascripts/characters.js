@@ -1,15 +1,6 @@
 import utilities from './helpers/util.js';
 import details from './details.js';
 
-const charachtersExporter = () => {
-    for (let i = 0; i < charachters.length; i++){
-        console.log(charachters[i]);
-    }
-    console.log(charachters.find( (element) => {
-        return element.id === 'character2';
-    }));
-};
-
 const charachters = [
     {
         name: 'John Snow',
@@ -63,4 +54,4 @@ const createEvents = () => {
     }
 };
 
-export default {charachtersExporter, cardBuilder, createEvents};
+export default {cardBuilder, createEvents};

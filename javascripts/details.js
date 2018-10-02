@@ -1,9 +1,6 @@
 import utilities from "./helpers/util.js";
 import characters from "./characters.js"
 
-const detailsExporter = () => {
-    console.log("details.js linked");
-};
 
 const detailBuilder = (object) => {
     let newString =`<div class="container new-card card" id="${object.id}">
@@ -22,4 +19,4 @@ const closer = () => {
     document.getElementById('close').addEventListener('click', characters.cardBuilder);
 };
 
-export default {detailsExporter, detailBuilder};
+export default {detailBuilder};
