@@ -39,7 +39,7 @@ const charachters = [
 const cardBuilder = () => {
     let newString = ``;
     for (let i = 0; i < charachters.length; i++) {
-        newString += `  <div class="card" style="width: 18rem;" id="${charachters[i].id}">
+        newString += `  <div class="card" id="${charachters[i].id}">
                             <img class="card-img-top" src="${charachters[i].imgUrl}" alt="${charachters[i].name}">
                             <div class="card-body">
                                 <h5 class="card-title">${charachters[i].name}</h5>
