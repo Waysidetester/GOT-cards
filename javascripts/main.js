@@ -4,6 +4,7 @@ import characters from './characters.js';
 
 
 console.log("main.js linked");
-utilities();
+utilities.utilitesExporter();
 details();
 characters();
+utilities.printToDom('contentHere', 'test string printed')
