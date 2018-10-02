@@ -8,6 +8,7 @@ const init = () => {
     details();
     characters.cardBuilder();
     characters.charachtersExporter();
+    characters.createEvents();
 }
 
 init();

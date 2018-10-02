@@ -49,4 +49,16 @@ const cardBuilder = () => {
     utilities.printToDom('contentHere', newString);
 };
 
-export default {charachtersExporter, cardBuilder};
+const createEvents = () => {
+    const cardArray = document.getElementsByClassName('card');
+    for (let i = 0; i <cardArray.length; i++) {
+        cardArray[i].addEventListener('click', (e) => {
+            let cardId = e.currentTarget.id;
+            console.log(charachters.find( (element) => {
+                return (element.id === cardId);
+            }));
+        })
+    }
+};
+
+export default {charachtersExporter, cardBuilder, createEvents};
