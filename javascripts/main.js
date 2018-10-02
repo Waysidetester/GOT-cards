@@ -3,7 +3,11 @@ import details from './details.js';
 import characters from './characters.js';
 
 
-console.log("main.js linked");
-utilities();
-details();
-characters();
+const init = () => {
+    console.log("main.js linked");
+    utilities();
+    details();
+    characters();
+}
+
+init();
