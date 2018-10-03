@@ -1,7 +1,7 @@
 import utilities from './helpers/util.js';
 import details from './details.js';
 
-const charachters = [];
+let charachters = [];
 
 const cardBuilder = (characterArray) => {
     let newString = `<button id="allChar">All</button>
@@ -22,6 +22,10 @@ const exportCharacterz = () => {
     return charachters;
 }
 
+const setCharacters = (newArray) => {
+    charachters = newArray;
+};
+
 const createEvents = () => {
     const cardArray = document.getElementsByClassName('card');
     for (let i = 0; i <cardArray.length; i++) {
@@ -34,4 +38,4 @@ const createEvents = () => {
     }
 };
 
-export default {cardBuilder, createEvents, exportCharacterz};
+export default {cardBuilder, createEvents, exportCharacterz, setCharacters};
