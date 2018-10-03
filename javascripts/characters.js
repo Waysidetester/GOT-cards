@@ -3,9 +3,6 @@ import details from './details.js';
 
 let charachters = [];
 
-const setCharacters = (newArray) => {
-    charachters = newArray;
-};
 
 const cardBuilder = (characterArray) => {
     let newString = `<button id="allChar">All</button>

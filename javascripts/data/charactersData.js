@@ -1,16 +1,10 @@
 import charPrinter from "../characters.js";
 
 function executeThisCodeAfterFileLoaded () {
-<<<<<<< HEAD
     let data = JSON.parse(this.responseText);
     charPrinter.setCharacters(data.characters);
-    charPrinter.cardBuilder(charPrinter.exportCharacterz);
-=======
-  
-    let data = JSON.parse(this.responseText);
-    charPrinter.setCharacters(data.characters);
-    charPrinter.cardBuilder();
->>>>>>> master
+    charPrinter.cardBuilder(charPrinter.exportCharacterz());
+    console.log(charPrinter.exportCharacterz())
 }
 
 function executeThisCodeIfXHRFails () {
