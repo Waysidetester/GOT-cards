@@ -1,9 +1,11 @@
 import utilities from './helpers/util.js';
 import details from './details.js';
 
-const charachters = [
-    
-];
+let charachters = [];
+
+const setCharacters = (newArray) => {
+    charachters = newArray;
+};
 
 const cardBuilder = () => {
     let newString = ``;
@@ -31,4 +33,4 @@ const createEvents = () => {
     }
 };
 
-export default {cardBuilder, createEvents};
+export default {cardBuilder, createEvents, setCharacters};
