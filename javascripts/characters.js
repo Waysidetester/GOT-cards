@@ -3,22 +3,28 @@ import details from './details.js';
 
 let charachters = [];
 
-const setCharacters = (newArray) => {
-    charachters = newArray;
-};
 
-const cardBuilder = () => {
-    let newString = ``;
-    for (let i = 0; i < charachters.length; i++) {
-        newString += `  <div class="card all-cards" id="${charachters[i].id}">
-                            <img class="card-img-top" src="${charachters[i].imgUrl}" alt="${charachters[i].name}">
+const cardBuilder = (characterArray) => {
+    let newString = `<button id="allChar">All</button>
+                    <button id="stark">Stark</button>`;
+    for (let i = 0; i < characterArray.length; i++) {
+        newString += `  <div class="card all-cards" id="${characterArray[i].id}">
+                            <img class="card-img-top" src="${characterArray[i].imgUrl}" alt="${characterArray[i].name}">
                             <div class="card-body">
-                                <h5 class="card-title">${charachters[i].name}</h5>
+                                <h5 class="card-title">${characterArray[i].name}</h5>
                             </div>
                         </div>`
     }
     utilities.printToDom('contentHere', newString);
     createEvents();
+};
+
+const exportCharacterz = () => {
+    return charachters;
+}
+
+const setCharacters = (newArray) => {
+    charachters = newArray;
 };
 
 const createEvents = () => {
@@ -33,4 +39,5 @@ const createEvents = () => {
     }
 };
 
-export default {cardBuilder, createEvents, setCharacters};
+export default {cardBuilder, createEvents, exportCharacterz, setCharacters};
+

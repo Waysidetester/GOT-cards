@@ -16,7 +16,9 @@ const detailBuilder = (object) => {
 };
 
 const closer = () => {
-    document.getElementById('close').addEventListener('click', characters.cardBuilder);
+    document.getElementById('close').addEventListener('click', () => {
+        characters.cardBuilder(characters.exportCharacterz)
+    });
 };
 
 export default {detailBuilder};
